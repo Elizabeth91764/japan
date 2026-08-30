@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jesse’s Birthday · September 15</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;800&amp;family=Yuji+Syuku&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#f6f2e9;--card:#fffdf9;--line:#d8d0c2;--ink:#24211d;--soft:#5f5a52;--red:#9f3b2d;--gold:#9a7332}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Zen Kaku Gothic New',sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:640px;margin:0 auto;padding:0 20px 70px}
+.hero{padding:48px 20px 30px;text-align:center}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600}
+.title{font-family:'Yuji Syuku','Shippori Mincho',serif;font-weight:400;font-size:40px;line-height:1.15;margin:10px 0 0;color:var(--red)}
+.hero-date{font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--soft);margin-top:10px}
+.divider{width:200px;max-width:100%;height:3px;background:var(--red);margin:24px auto 0}
+.roster{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:24px}
+.roster span{display:inline-flex;align-items:center;min-height:30px;padding:5px 12px;background:#fff;border:1px solid var(--line);border-radius:14px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;white-space:nowrap}
+.grid{margin-top:28px;border-top:1px solid var(--line)}
+.hour-row{display:grid;grid-template-columns:88px minmax(0,1fr);column-gap:16px;border-bottom:1px solid var(--line)}
+.hour-label{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:14px 8px 0 0;text-align:right;border-right:1px solid var(--line);line-height:1.2}
+.hour-events{min-width:0;padding:12px 0;display:flex;flex-direction:column;gap:10px}
+.transport{display:flex;align-items:center;gap:9px;padding:8px 10px;background:#fff;border-radius:8px;font-size:12.5px}
+.t-icon{width:22px;height:22px;border:1px dashed var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;flex:0 0 auto}
+.t-time{font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:600;flex:0 0 auto}
+.t-text{line-height:1.4;flex:1}
+.map-link{margin-left:auto;color:#6d4f1d;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;text-decoration:none;border:1px solid var(--line);padding:4px 6px;border-radius:6px;white-space:nowrap}
+.activity{background:var(--card);border-radius:10px;padding:14px 16px 16px;border-left:4px solid var(--red);box-shadow:0 3px 12px rgba(55,45,30,.10)}
+.activity-time{font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.activity-time::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--red)}
+.activity-title{font-family:'Shippori Mincho',serif;font-weight:700;font-size:20px;margin:5px 0 4px}
+.activity-loc{font-size:12.5px;margin-bottom:7px}
+.activity-loc a{color:var(--red);font-weight:700;text-decoration:none}
+.activity-body{font-size:14.5px;line-height:1.55}
+.activity-body p{margin:0}
+.nav{display:flex;justify-content:center;gap:12px;margin-top:36px}
+.nav a{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;color:var(--gold);text-decoration:none;border:1px solid var(--line);padding:7px 10px;border-radius:7px;background:#fff}
+footer{text-align:center;margin-top:18px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--soft);letter-spacing:.08em}
+@media(max-width:520px){
+  .title{font-size:34px}
+  .hour-row{grid-template-columns:82px minmax(0,1fr);column-gap:12px}
+  .hour-label{font-size:9.5px;text-align:left;padding-right:4px;line-height:1.2;white-space:normal}
+  .transport{flex-wrap:wrap;display:grid;grid-template-columns:22px auto minmax(0,1fr);gap:8px 9px;align-items:center;min-width:0}
+  .wrap{padding-left:18px;padding-right:18px}
+  .hour-events{min-width:0}
+  .activity{min-width:0}
+  .transport .t-icon{grid-column:1;grid-row:1}
+  .transport .t-time{grid-column:2;grid-row:1;min-width:0;white-space:normal}
+  .transport .t-text{grid-column:3;grid-row:1;min-width:0;overflow-wrap:anywhere}
+  .transport .map-link{grid-column:2 / 4;grid-row:2;justify-self:start;margin-left:0;max-width:100%;white-space:normal;line-height:1.3}
+}
+@media(max-width:400px){
+  .map-link{display:inline-block}
+}
+
+.note{
+  margin-top:10px;
+  padding:10px 12px;
+  background:#f3eadc;
+  border-left:3px solid var(--gold);
+  border-radius:7px;
+  font-size:12.5px;
+  line-height:1.5;
+  color:var(--soft);
+}
+.activity-detail{
+  margin-top:8px;
+  font-size:13px;
+  line-height:1.5;
+  color:var(--soft);
+}
+
+</style>
+
+
+<style id="modern-site-banner">
+.modern-site-nav{
+  position:relative;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:28px;padding:0 28px;min-height:74px;
+  background:#24211d;color:#fff;
+  font-family:'Zen Kaku Gothic New',Arial,sans-serif;
+}
+.modern-site-brand{
+  color:#fff;text-decoration:none;font-size:18px;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;white-space:nowrap;
+}
+.modern-site-links{display:flex;align-items:center;gap:30px}
+.modern-site-links a{
+  position:relative;color:#d8d1c7;text-decoration:none;
+  font-size:14px;font-weight:700;padding:27px 0 25px;
+}
+.modern-site-links a:hover,.modern-site-links a.active{color:#fff}
+.modern-site-links a.active::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:3px;
+  background:#b84a3a;border-radius:3px 3px 0 0;
+}
+@media(max-width:600px){
+  .modern-site-nav{min-height:64px;padding:0 18px;gap:16px}
+  .modern-site-brand{font-size:15px;letter-spacing:.07em}
+  .modern-site-links{gap:17px}
+  .modern-site-links a{font-size:12px;padding:23px 0 21px}
+}
+@media(max-width:390px){
+  .modern-site-nav{padding:0 13px}
+  .modern-site-brand{font-size:13px}
+  .modern-site-links{gap:12px}
+  .modern-site-links a{font-size:11px}
+}
+</style>
+
+</head>
+<body>
+<nav class="modern-site-nav">
+<a class="modern-site-brand" href="index.html">Japan 2026</a>
+<div class="modern-site-links">
+<a class="active" href="index.html#itinerary">Itinerary</a>
+<a href="flights_master_typography_fixed.html">Flights</a>
+<a href="japan_tickets_confirmations_master.html">Tickets</a>
+</div>
+</nav>
+<div class="wrap">
+<header class="hero">
+<div class="eyebrow">Japan Trip · Tokyo</div>
+<h1 class="title">Jesse’s Birthday</h1>
+<div class="hero-date">Tuesday, September 15, 2026</div>
+<div class="divider"></div>
+<div class="roster"><span>Elizabeth</span><span>Paris</span><span>Jesse</span><span>Joe</span></div>
+</header>
+<div class="grid"><div class="hour-row"><div class="hour-label">Morning</div><div class="hour-events"><div class="activity"><div class="activity-top"><div class="activity-time">Morning</div></div><div class="activity-title">🎂 Birthday Morning</div><div class="activity-body"><p>Easy birthday morning in Shinjuku.</p></div></div></div></div><div class="hour-row"><div class="hour-label">12 PM</div><div class="hour-events"><div class="activity"><div class="activity-top"><div class="activity-time">12:00 – 2:00 PM</div></div><div class="activity-title">🥩 Jesse’s Wagyu Birthday Lunch</div><div class="activity-body"><p>Japanese Wagyu or steak birthday lunch.</p><div class="note"><strong>TBD:</strong> Restaurant still needs to be selected and reserved.</div></div></div></div></div><div class="hour-row"><div class="hour-label">2 PM</div><div class="hour-events"><div class="activity"><div class="activity-top"><div class="activity-time">~2:00 PM</div></div><div class="activity-title">🏨 Back to Shinjuku</div><div class="activity-body"><p>Return to Shinjuku before heading to Yokohama.</p></div></div></div></div><div class="hour-row"><div class="hour-label">3:30 PM</div><div class="hour-events"><div class="transport"><span class="t-icon">🚆</span><span class="t-time">~3:45 – 4:00 PM</span><span class="t-text">Shinjuku → Yokohama Stadium</span><a class="map-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Shinjuku+Station,+Tokyo&amp;destination=Yokohama+Stadium,+Yokohama&amp;travelmode=transit" target="_blank">Yokohama Route</a></div></div></div><div class="hour-row"><div class="hour-label">6 PM</div><div class="hour-events"><div class="activity"><div class="activity-top"><div class="activity-time">6:00 PM</div></div><div class="activity-title">⚾ Yokohama DeNA BayStars</div><div class="activity-body"><p><strong>CONFIRMED ✓</strong></p><p>Yokohama Stadium · Infield S / S114 area.</p><p><a href="https://www.google.com/maps/search/?api=1&amp;query=Yokohama+Stadium" target="_blank">Google Maps</a></p><div class="note"><strong>Ticket reminder:</strong> Pick up the BayStars tickets at Lawson before the game.</div></div></div></div></div><div class="hour-row"><div class="hour-label">Night</div><div class="hour-events"><div class="activity"><div class="activity-title">🌙 Birthday Night</div><div class="activity-body"><p>Open evening after the game — Yokohama or back to Shinjuku.</p></div></div></div></div></div>
+<div class="nav">
+</div>
+<footer>TOKYO · SEPTEMBER 15, 2026</footer>
+</div>
+<div style="max-width:640px;margin:24px auto 40px;padding:0 18px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;"><a href="index.html" style="text-decoration:none;border:1px solid #e1d6c6;background:#fffdf8;color:#2b2926;padding:10px 14px;border-radius:14px;font-weight:700;">⌂ Home</a></div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Japan 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;600;700;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f2e9;--paper:#fffdf8;--ink:#24211d;--muted:#756e63;--line:#d9d0c1;--red:#a13e2f;--gold:#9a7332;--charcoal:#24211d;--shadow:0 6px 22px rgba(45,35,24,.11)}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--ink);font-family:'Zen Kaku Gothic New',sans-serif;-webkit-font-smoothing:antialiased} a{color:inherit}
+.topbar{background:var(--charcoal);color:#fffdf8;border-bottom:1px solid rgba(255,255,255,.08)}
+.topbar-inner{max-width:1120px;margin:0 auto;padding:0 22px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-family:'Zen Kaku Gothic New',sans-serif;font-size:18px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.nav{display:flex;align-items:center;gap:30px;font-size:14px;font-weight:600;letter-spacing:.02em}
+.nav a{text-decoration:none;color:#f7f2e8;opacity:.82;padding:24px 0 20px;border-bottom:3px solid transparent;transition:.15s ease}.nav a:hover,.nav a.active{opacity:1;color:#fff}.nav a.active{border-bottom-color:var(--red)}
+.site{max-width:1120px;margin:0 auto;padding:18px 14px 54px}
+.hero{position:relative;overflow:hidden;border-radius:24px;background:#efe5d4;box-shadow:var(--shadow)}
+.hero img{display:block;width:100%;aspect-ratio:2.45/1;object-fit:cover;object-position:center 54%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(22,20,17,.38),rgba(22,20,17,.12) 58%,rgba(22,20,17,0))}
+.hero-copy{position:absolute;z-index:1;inset:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;text-align:left;padding:clamp(24px,4vw,48px)}
+.hero-kicker{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#fff;margin-bottom:10px}
+.hero-title{margin:0;font-family:'Zen Kaku Gothic New',sans-serif;font-size:clamp(44px,7vw,78px);font-weight:900;line-height:.92;letter-spacing:-.055em;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.18)}
+.hero-locations{margin-top:14px;font-size:clamp(13px,1.6vw,17px);font-weight:600;letter-spacing:.035em;color:#fff}
+.hero-dates{margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.9)}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin:30px 8px 15px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.section-head h2{margin:0;font-family:'Zen Kaku Gothic New',sans-serif;font-weight:800;font-size:29px;line-height:1;letter-spacing:-.025em}.section-head span{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.10em;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.day{position:relative;display:block;overflow:hidden;background:var(--paper);border:1px solid rgba(185,170,148,.22);border-radius:20px;text-decoration:none;box-shadow:var(--shadow);transition:transform .15s ease,box-shadow .15s ease}.day:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(45,35,24,.16)}.day:focus-visible{outline:3px solid rgba(161,62,47,.4);outline-offset:3px}.pic{position:relative;overflow:hidden;background:#ddd2c3;aspect-ratio:1.28/1}.pic img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s ease}.day:hover .pic img{transform:scale(1.018)}
+.badge{position:absolute;z-index:2;top:12px;left:12px;width:61px;height:61px;border-radius:50%;background:rgba(255,253,248,.96);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 3px 12px rgba(38,30,20,.12);border:1px solid rgba(255,255,255,.7)}.badge .mon{font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;letter-spacing:.12em;line-height:1}.badge .num{font-family:'Zen Kaku Gothic New',sans-serif;font-size:24px;line-height:.95;color:var(--red);font-weight:800;margin-top:3px}.card-copy{padding:13px 16px 17px;min-height:94px}.card-title{font-family:'Shippori Mincho',serif;font-size:19px;line-height:1.15;font-weight:600;margin:0}.card-place{font-family:'JetBrains Mono',monospace;font-size:9px;line-height:1.2;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:10px}
+.d5 img{object-position:50% 46%}.d6 img{object-position:54% 51%}.d7 img{object-position:46% 50%}.d8 img{object-position:47% 49%}.d9 img{object-position:50% 55%}.d10 img{object-position:50% 49%}.d11 img{object-position:58% 50%}.d12 img{object-position:54% 48%}.d13 img{object-position:55% 39%}.d14 img{object-position:53% 54%}.d15 img{object-position:50% 57%}.d16 img{object-position:58% 49%}
+footer{text-align:center;margin:42px 0 10px;font-family:'JetBrains Mono',monospace;font-size:10px;color:#91887b;letter-spacing:.10em;text-transform:uppercase}
+@media(max-width:760px){.topbar-inner{height:auto;min-height:62px;padding:0 14px;gap:12px}.brand{font-size:15px;letter-spacing:.09em}.nav{font-size:12px;gap:14px}.nav a{padding:21px 0 18px}.site{padding:12px 10px 40px}.hero{border-radius:20px}.hero img{aspect-ratio:1.55/1;object-position:center 52%}.hero-copy{padding:22px}.hero-title{font-size:clamp(39px,12vw,58px)}.hero-locations{font-size:13px}.hero-kicker{font-size:9px}.hero-dates{font-size:8px}.section-head{margin:23px 4px 12px}.section-head h2{font-size:25px}.section-head span{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.day{border-radius:17px}.pic{aspect-ratio:1.08/1}.badge{top:9px;left:9px;width:52px;height:52px}.badge .mon{font-size:7px}.badge .num{font-size:21px}.card-copy{padding:11px 11px 13px;min-height:80px}.card-title{font-size:16px}.card-place{font-size:8px;margin-top:8px}}
+@media(max-width:390px){.brand{font-size:13px}.nav{gap:10px;font-size:11px}.hero img{aspect-ratio:1.42/1}.hero-copy{padding:18px}.hero-locations{font-size:12px}.card-title{font-size:15px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">Japan 2026</div>
+    <nav class="nav" aria-label="Primary">
+      <a class="active" href="#itinerary">Itinerary</a>
+      <a href="flights_master_typography_fixed.html">Flights</a>
+      <a href="japan_tickets_confirmations_master.html">Tickets</a>
+    </nav>
+  </div>
+</header>
+<main class="site">
+  <section class="hero" aria-label="Japan 2026 trip">
+    <img src="images/homepage_banner.png" alt="Summer panorama of Japan with a pagoda, green mountains and Mount Fuji">
+    <div class="hero-copy">
+      <h1 class="hero-title">Japan 2026</h1>
+      <div class="hero-locations">Osaka · Kyoto · Nara · Tokyo</div>
+      <div class="hero-dates">September 3–16, 2026</div>
+    </div>
+  </section>
+
+  <section id="itinerary" aria-labelledby="itinerary-title">
+    <div class="section-head">
+      <h2 id="itinerary-title">Itinerary</h2>
+      <span>September 5–16, 2026</span>
+    </div>
+
+    <div class="grid">
+      <a class="day" href="sept5_final.html" aria-label="September 5, Kyoto Birthday">
+        <div class="pic d5"><span class="badge"><span class="mon">SEP</span><span class="num">05</span></span><img src="images/day_05_kyoto.png" alt="Kyoto Higashiyama traditional street and pagoda"></div>
+        <div class="card-copy"><h3 class="card-title">Kyoto Birthday</h3><div class="card-place">Kyoto</div></div>
+      </a>
+      <a class="day" href="sept6_final.html" aria-label="September 6, Osaka">
+        <div class="pic d6"><span class="badge"><span class="mon">SEP</span><span class="num">06</span></span><img src="images/day_06_osaka.png" alt="Dotonbori canal and neon lights in Osaka"></div>
+        <div class="card-copy"><h3 class="card-title">Osaka</h3><div class="card-place">Osaka</div></div>
+      </a>
+      <a class="day" href="sept7_final.html" aria-label="September 7, Nara">
+        <div class="pic d7"><span class="badge"><span class="mon">SEP</span><span class="num">07</span></span><img src="images/day_07_nara.png" alt="Deer on a sunlit path in Nara Park"></div>
+        <div class="card-copy"><h3 class="card-title">Nara</h3><div class="card-place">Nara</div></div>
+      </a>
+      <a class="day" href="sept8_final.html" aria-label="September 8, Arashiyama">
+        <div class="pic d8"><span class="badge"><span class="mon">SEP</span><span class="num">08</span></span><img src="images/day_08_arashiyama.png" alt="Sagano Romantic Train above the Hozugawa River"></div>
+        <div class="card-copy"><h3 class="card-title">Arashiyama</h3><div class="card-place">Kyoto</div></div>
+      </a>
+      <a class="day" href="sept9_final.html" aria-label="September 9, Tokyo Arrival">
+        <div class="pic d9"><span class="badge"><span class="mon">SEP</span><span class="num">09</span></span><img src="images/day_09_shibuya.png" alt="Shibuya Scramble Crossing at blue hour"></div>
+        <div class="card-copy"><h3 class="card-title">Tokyo Arrival</h3><div class="card-place">Tokyo</div></div>
+      </a>
+      <a class="day" href="sept10_final.html" aria-label="September 10, Meiji and Shinjuku">
+        <div class="pic d10"><span class="badge"><span class="mon">SEP</span><span class="num">10</span></span><img src="images/day_10_shinjuku.png" alt="Lantern-lit Omoide Yokocho alley in Shinjuku"></div>
+        <div class="card-copy"><h3 class="card-title">Meiji + Shinjuku</h3><div class="card-place">Tokyo</div></div>
+      </a>
+      <a class="day" href="sept11_final.html" aria-label="September 11, TeamLab and Tokyo Tower">
+        <div class="pic d11"><span class="badge"><span class="mon">SEP</span><span class="num">11</span></span><img src="images/day_11_teamlab.png" alt="Immersive digital flower and light installation"></div>
+        <div class="card-copy"><h3 class="card-title">TeamLab + Tokyo Tower</h3><div class="card-place">Tokyo</div></div>
+      </a>
+      <a class="day" href="sept12_final.html" aria-label="September 12, Flea Market and Odaiba">
+        <div class="pic d12"><span class="badge"><span class="mon">SEP</span><span class="num">12</span></span><img src="images/day_12_odaiba.png" alt="Unicorn Gundam in Odaiba with Rainbow Bridge"></div>
+        <div class="card-copy"><h3 class="card-title">Flea Market + Odaiba</h3><div class="card-place">Tokyo</div></div>
+      </a>
+      <a class="day" href="sept13_final.html" aria-label="September 13, Asakusa and Akihabara">
+        <div class="pic d13"><span class="badge"><span class="mon">SEP</span><span class="num">13</span></span><img src="images/day_13_asakusa.png" alt="Kaminarimon lantern and Tokyo Skytree in Asakusa"></div>
+        <div class="card-copy"><h3 class="card-title">Asakusa + Akihabara</h3><div class="card-place">Tokyo</div></div>
+      </a>
+      <a class="day" href="sept14_final.html" aria-label="September 14, Shopping Day">
+        <div class="pic d14"><span class="badge"><span class="mon">SEP</span><span class="num">14</span></span><img src="images/day_14_shopping.png" alt="Harajuku vintage fashion shopping flat lay"></div>
+        <div class="card-copy"><h3 class="card-title">Shopping Day</h3><div class="card-place">Tokyo</div></div>
+      </a>
+      <a class="day" href="sept15_final.html" aria-label="September 15, Jesse's Birthday">
+        <div class="pic d15"><span class="badge"><span class="mon">SEP</span><span class="num">15</span></span><img src="images/day_15_yokohama.png" alt="Yokohama Stadium at night"></div>
+        <div class="card-copy"><h3 class="card-title">Jesse’s Birthday</h3><div class="card-place">Yokohama</div></div>
+      </a>
+      <a class="day" href="sept16_final.html" aria-label="September 16, Departure Day">
+        <div class="pic d16"><span class="badge"><span class="mon">SEP</span><span class="num">16</span></span><img src="images/day_16_departure.png" alt="Airplane departing Japan at sunset with Mount Fuji"></div>
+        <div class="card-copy"><h3 class="card-title">Departure Day</h3><div class="card-place">Tokyo</div></div>
+      </a>
+    </div>
+  </section>
+
+  <footer>Japan 2026 · Family Trip</footer>
+</main>
+</body>
+</html>
